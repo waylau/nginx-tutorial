@@ -1,4 +1,4 @@
-# 下载、安装
+# 下载、安装、运行
 
 ## 下载
 
@@ -144,11 +144,11 @@ start nginx
  
 NGINX 正常启动后会占用 80 端口。打开任务管理器中，能够看到相关的 NGINX 活动线程。
 
-![图5-4 蓝绿部署](../images/installation/nginx-win32.jpg)
+![](../images/installation/nginx-win32.jpg)
 
-打开浏览器，访问<http://localhost:80> 就能看到 NGINX 的欢迎页面。
+打开浏览器，访问<http://localhost:80> （其中 80 端口号可以省略）就能看到 NGINX 的欢迎页面。
 
-![图5-4 蓝绿部署](../images/installation/nginx-welcome.jpg)
+![](../images/installation/nginx-welcome.jpg)
 
 关闭 NGINX 执行：
 
