@@ -1,6 +1,6 @@
-# Hello World!作为 HTTP 服务器
+# Hello World! 作为 HTTP 服务器
 
-按照编程管理，我们要编写第一个“Hello World”应用案例。该案例是使用 NGINX 来作为 HTTP 服务器。
+按照编程惯例，我们要编写第一个“Hello World”应用案例。该案例是使用 NGINX 来作为 HTTP 服务器。
 
 众所周知， NGINX 一款高性能的 HTTP 服务器。
 
