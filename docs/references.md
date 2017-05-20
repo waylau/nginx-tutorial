@@ -2,3 +2,4 @@
 
 * http://nginx.org/en/docs/
 * https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
+* http://nginx.org/en/docs/http/load_balancing.html
