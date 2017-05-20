@@ -128,19 +128,37 @@ apt-get install nginx
 
 ```shell
 cd c:\
-unzip nginx-1.2.3.zip
-ren nginx-1.2.3 nginx
+unzip nginx-1.13.0.zip
+ren nginx-1.13.0 nginx
 cd nginx
 start nginx
 ```
 
-控制语句为：
+如果有那问题，可以参看日志 `c:nginxlogserror.log`。
+
+此外，目前，NGINX 官网只提供了 32位的安装包，如果想安装 64位的版本，可以查看由 Kevin Worthington 维护 Windows 版本 <https://kevinworthington.com/nginx-for-windows/>
+
+
+
+## 验证安装
+ 
+NGINX 正常启动后会占用 80 端口。打开任务管理器中，能够看到相关的 NGINX 活动线程。
+
+![图5-4 蓝绿部署](../images/installation/nginx-win32.jpg)
+
+打开浏览器，访问<http://localhost:80> 就能看到 NGINX 的欢迎页面。
+
+![图5-4 蓝绿部署](../images/installation/nginx-welcome.jpg)
+
+关闭 NGINX 执行：
+
+```shell
+nginx -s stop 
+```
+
+其他常用控制语句有：
 
 ```
 nginx -s [ stop | quit | reopen | reload ]
 ```
-
-如果有那问题，可以参看日志 `c:nginxlogserror.log`。
-
-有关 Windows 平台的版本，可以参见<https://kevinworthington.com/nginx-for-windows/>
 
