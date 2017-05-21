@@ -7,6 +7,7 @@
 * [配置服务器名称](docs/server-names.md)
 * [配置 HTTPS 服务器](docs/https-server.md)
 * [作为 HTTP 负载均衡器](docs/load-balancer.md)
+* [压缩与解压](docs/compression-and-decompression.md)
 * [参考资料](docs/references.md)
 * To be continued ...未完待续...
 
