@@ -159,8 +159,8 @@ nginx -s stop
 ## 控制语句
 
 
-NGINX 启动后，有一个主进程（master process）和一个或多个工作进程（worker process），主进程的作用主要是读入和检查nginx的配置信息，以及维护工作进程；工作进程才是真正处理客户端请求的进程。具体要启动多少个工作进程，可以在 NGINX 的配置文件`nginx.conf`中通过`worker_processes`指令指定。
-NGINX 启动后，可以通过以下这些命令来控制 NGINX：
+NGINX 启动后，有一个主进程（master process）和一个或多个工作进程（worker process），主进程的作用主要是读入和检查NGINX的配置信息，以及维护工作进程；工作进程才是真正处理客户端请求的进程。具体要启动多少个工作进程，可以在 NGINX 的配置文件`nginx.conf`中通过`worker_processes`指令指定。
+可以通过以下这些命令来控制 NGINX：
 
 ```
 nginx -s [ stop | quit | reopen | reload ]
@@ -168,9 +168,9 @@ nginx -s [ stop | quit | reopen | reload ]
 
 其中：
 
-* `nginx -s stop`： 强制停止nginx，不管工作进程当前是否正在处理用户请求，都会立即退出。
-* `nginx -s quit`：“优雅地”退出nginx，执行这个命令后，工作进程会将当前正在处理的请求处理完毕后，再退出。
-* `nginx -s reload`：重载配置信息。当nginx的配置文件改变之后，同过执行这个命令，使更改的配置信息生效，而无需重新启动nginx.
+* `nginx -s stop`： 强制停止NGINX，不管工作进程当前是否正在处理用户请求，都会立即退出。
+* `nginx -s quit`：“优雅地”退出NGINX，执行这个命令后，工作进程会将当前正在处理的请求处理完毕后，再退出。
+* `nginx -s reload`：重载配置信息。当NGINX的配置文件改变之后，同过执行这个命令，使更改的配置信息生效，而无需重新启动nginx.
 * `nginx -s reopen`：重新打开日志文件。
 
 > 当重载配置信息时，NGINX 的主进程首先检查配置信息，如果配置信息没有错误，主进程会启动新的工作进程，并发出信息通知旧的工作进程退出，旧的工作进程接收到信号后，会等到处理完当前正在处理的请求后退出。如果nginx检查配置信息发现错误，就会回滚所做的更改，沿用旧的工作进程继续工作。
